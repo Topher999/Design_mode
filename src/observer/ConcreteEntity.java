@@ -8,6 +8,7 @@ package observer;
 public class ConcreteEntity extends Observable implements IEntity {
     @Override
     public void doSomething() {
-        notifyAllObserver("沉默的世界");
+        //fixme 这样对代码有入侵，破坏逻辑代码
+        this.notifyAllObserver("沉默的世界");
     }
 }

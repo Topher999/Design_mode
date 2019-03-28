@@ -11,16 +11,16 @@ import java.lang.reflect.Method;
 public class MyInvocationHandler implements InvocationHandler{
     private Object object;
 
-    public MyInvocationHandler(Object object){
-        this.object=object;
-    }
+//    public MyInvocationHandler(Object object){
+//        this.object=object;
+//    }
 
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         //可以进行切点的验证
         System.out.println("执行方法前");
-        method.invoke(object,args);
+//        method.invoke(object,args);
         System.out.println("执行方法后");
         return null;
     }

@@ -13,8 +13,8 @@ public class DynamicProxy {
         ClassLoader loader=ISubject.class.getClassLoader();
 //        Class<?>[] interfaces=ISubject.class.getInterfaces();
         Class<?>[] interfaces=new Class[]{ISubject.class};
-//        InvocationHandler handler=new MyInvocationHandler(subject);
-        InvocationHandler handler=new MyInvocationHandler();
+        InvocationHandler handler=new MyInvocationHandler(subject);
+//        InvocationHandler handler=new MyInvocationHandler();
         return (T) Proxy.newProxyInstance(loader,interfaces,handler);
     }
 }
